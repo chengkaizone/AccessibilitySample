@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +6,45 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.line.accessibilitysample.MainActivity">
+    tools:context=".MainActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/installButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignLeft="@+id/activeButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/activeButton"
+        android:layout_marginTop="90dp"
+        android:text="安装应用" />
+
+    <Button
+        android:id="@+id/killAppButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/installButton"
+        android:layout_alignRight="@+id/installButton"
+        android:layout_below="@+id/installButton"
+        android:layout_marginTop="22dp"
+        android:text="杀死应用" />
+
+    <Button
+        android:id="@+id/activeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="激活辅助功能" />
+
+    <Button
+        android:id="@+id/uninstallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/killAppButton"
+        android:layout_alignRight="@+id/killAppButton"
+        android:layout_below="@+id/killAppButton"
+        android:layout_marginTop="16dp"
+        android:text="卸载应用" />
+
 </RelativeLayout>
