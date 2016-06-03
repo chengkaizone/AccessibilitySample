@@ -1,4 +1,4 @@
-package com.line.accessibilitysample;
+package com.line.accessibilitysample.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,6 +7,9 @@ import android.os.Environment;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.line.accessibilitysample.R;
+import com.line.accessibilitysample.service.AutoInstallAccessibilityService;
 
 import java.io.File;
 import java.io.FileOutputStream;

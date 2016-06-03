@@ -1,4 +1,4 @@
-package com.line.accessibilitysample;
+package com.line.accessibilitysample.service;
 
 import android.accessibilityservice.AccessibilityService;
 import android.util.Log;
@@ -81,8 +81,11 @@ public class AutoInstallAccessibilityService extends AccessibilityService {
             for (AccessibilityNodeInfo node: install_nodes) {
                 if (buttonClassName.equals(node.getClassName())) {
                     node.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                    Log.i(TAG, "点击安装按钮: " + node.toString());
                 }
             }
+        } else {
+            Log.i(TAG, "获取安装按钮: 失败!");
         }
 
         // 寻找下一步按钮并点击它
@@ -91,8 +94,11 @@ public class AutoInstallAccessibilityService extends AccessibilityService {
             for (AccessibilityNodeInfo node: next_nodes) {
                 if (buttonClassName.equals(node.getClassName())) {
                     node.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                    Log.i(TAG, "点击下一步按钮: " + node.toString());
                 }
             }
+        } else {
+            Log.i(TAG, "获取下一步按钮: 失败!");
         }
 
         // 寻找打开按钮并点击它
@@ -101,8 +107,11 @@ public class AutoInstallAccessibilityService extends AccessibilityService {
             for (AccessibilityNodeInfo node: open_nodes) {
                 if (buttonClassName.equals(node.getClassName())) {
                     node.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                    Log.i(TAG, "点击打开按钮: " + node.toString());
                 }
             }
+        } else {
+            Log.i(TAG, "获取打开按钮: 失败!");
         }
 
     }
